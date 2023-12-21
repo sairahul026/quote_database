@@ -1,0 +1,109 @@
+h1{
+  
+  background-color:white;
+  height: 150px;
+  text-align: center;
+  color: black;
+  font-size: 5rem;
+  width:370px;
+  margin-left: 35%;
+  margin-top: 2% !important;
+}
+
+.body{
+  background-color: E5CFF7;
+}
+
+input[type="checkbox"]{
+  border: 3px solid black;
+} 
+
+
+.text-centered{
+  display: box;
+  background-color: white;
+}
+
+
+#fname{
+  grid-column: 1;
+}
+.pt-1{
+  margin-left: 35%;
+  color:rgb(0, 128, 30);
+  text-align: center;
+}
+#plus{
+  height:25px;
+  width:25px;
+}
+#arrow{
+  
+  grid-column: 2;
+}
+
+#b{
+  grid-column: 3;
+}
+
+.text-center{
+  
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+.liclass{
+  grid-column: 1;
+}
+.check{
+  grid-column: 2;
+}
+#form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+  justify-content: center;
+  align-items: center;
+  gap :100px;
+  flex-wrap: wrap;
+}
+
+
+.crossed-out {
+  
+    text-decoration: line-through;
+    color:red;
+    
+  }
+
+ 
+  
+.liclass{
+list-style-position: inside;
+display: flex;
+align-items: center;
+width:30px;
+
+gap:40px;
+ 
+ 
+}
+.check{
+
+  grid-column: 2;
+  
+  margin-left: 19px;
+  justify-content: flex-end;
+ 
+  
+}
+
+.li >.input[type="checkbox"]{
+  grid-column: 2;
+}
+ 

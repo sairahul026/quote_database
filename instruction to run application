@@ -1,0 +1,7 @@
+# ejs_v1_todoa-lication
+Hello every One this is a simple express and node js to do application to access it 
+first you need to install express and node js in your pc
+1) now start cloning it 
+2) run npm init
+3) then node "index.js directory"
+4) now after doing that you can access the applicattion on "http://localhost:3000"

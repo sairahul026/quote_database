@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"  data-bs-theme="dark">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo_list</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="/styles/main.css">
+    </head>
+    <body style=" text-decoration-color:aqua;" >
+         <h1 style="width: auto; height: auto; background-color:rgba(var(--bs-tertiary-bg-rgb),var(--bs-bg-opacity)); font-size:large; color:rgb(30, 223, 223) ; margin-right:30%; ">Get Quote </h1>
+     
+    
+        <div  class="container my-5">
+           
+    
+            <div  class="p-5 text-center bg-body-tertiary rounded-3">
+               
+                <div class="d-inline-flex gap-2 mb-5">
+              
+                
+                    <form action="/generatequote" method="post">
+                      
+                        <button  style=" background-color:rgb(58, 202, 199);  position: relative; left:200%;"type= "submit" class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+                            generatequote!
+                            <svg class="bi ms-2" width="15" height="15"><use xlink:href="#arrow-right-short"></use></svg>
+                      </button>
+                      
+                      
+                    </form>
+                  
+                  </div>
+                  <center>
+                    <img   src="https://ntvb.tmsimg.com/assets/p8696131_b_h10_aa.jpg?w=960&h=540" width="200px" height="200px">
+                  </center>  
+                  <h2 style="color: aqua;">random_quote:</h2> <hr/>  
+                 
+                  
+                  <h4 class="text-body-emphasis">
+                    <% for(let j = 0; j < first_quote.length; j++) { %>
+                        <div style="color: aqua; width: auto; height: auto;" id="<%=first_quote[j][0].id%>">
+                            <p id="quote_<%= first_quote[j][0].id %>"><%= first_quote[j][0].quote %></p>
+                            <!-- Add Edit and Delete buttons -->
+                             
+                                 
+                         
+                            <br/>
+                        </div>
+                    <% } %>
+
+                  
+                </h4>
+                <h2>
+                 <p style="color: aqua;">your quote:</p> 
+                </h2>
+                <h4>
+
+                <% for(let i = 0; i < out.length; i++) { %>
+                    
+                  <p style="color: aqua;">  id="<%= out[i].id %>" quote: "<%= out[i].quote %>" added sucessfully </p>
+              <% } %>
+              </h4>
+                  <form method="post" action="/addquote">
+                    <input type="text" name="quoten">
+                    <button style="width:110px;" type="submit" class="btn btn-success">
+                      addquote
+                   
+                </button>
+                    </form>
+              
+                  
+                 
+
+                  <form method="post" action="/searchquote">
+                    <input type="text" name="quoteid">
+                    <button style="width:110px;"type="submit" class="btn btn-warning">searchquote</button> 
+                      
+                     
+                
+                    </form>
+                    <form method="post" action="/delete">
+                      <input type="text" name="delete">
+                      <button style="width:110px;" type="submit" class="btn btn-warning">deltequote</button> 
+                        
+                       
+                  
+                      </form>
+                      <form method="post" action="/update">
+                        <label > <p style="color: aqua;">enter quote</p></label>
+                        <input type="text" name="updatequote">
+                        <label >   <p style="color: aqua;"> enter quote id</p></label>
+                        <input type="text" name="updateid"><br/>
+                        <button style="width:110px;" type="submit" class="btn btn-warning">updatequote</button> 
+                          
+                         
+                    
+                        </form>
+                   
+                      <p style="color: aqua;"><%= deletedquote%></p>
+                    
+                    
+                    <% for(let a = 0; a< inid.length; a++) { %>
+                      
+                     
+                      <p style="color: aqua;">here is searched quote : <%= inid[0].quoteid %>  </p>
+              
+                   
+                    
+                    
+              
+                   
+                <% } %>
+                 
+                <% for(let u = 0; u< update.length; u++) { %>
+                      
+                     
+                  <p style="color: aqua;"> <%= update[0].quoteu %>  </p>
+          
+               
+                
+                
+          
+               
+            <% } %>
+
+               
+                  <svg class="bi mt-4 mb-3" style="color: var(--bs-indigo);" width="10" height="10"><use xlink:href="#bootstrap"></use></svg>
+                
+            </div>
+          </div>
+       
+        
+      
+          
+      
+       
+       
+      
+   
+   
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+   
+  
+    </body>
+</html>
