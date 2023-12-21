@@ -4,4 +4,4 @@ first you need to install express and node js in your pc
 1) now start cloning it 
 2) run npm init
 3) then node "index.js directory"
-4) now after doing that you can access the applicattion on "http://localhost:3000"
+4) now after doing that you can access the applicattion on "http://localhost:4000"
